@@ -1,0 +1,71 @@
+*{
+	font-family:
+}
+
+[data-tab-content] {
+	display: none;
+}
+
+.active[data-tab-content] { /*information about the CURRENT tab you're viewing*/
+	display: block;
+	animation: transitionIn 0.75s; /*adding a little info fade-in animation when you switch tabs*/	
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	animation: transitionIn 0.75s; /*adding a little info fade-in animation when you open the website*/
+	background-color: #000000;
+}
+
+@keyframes transitionIn {
+	from {
+		opacity: 0;
+		transform: rotateX(-10deg);
+	}
+		
+	to {
+		opacity: 1;
+		transform: rotateX(0);
+	}
+}
+
+.tabs {
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none; /*removes the dots (circles) next to tabs*/
+	margin: 0;
+	padding: 0;
+	background-color: #E60041;
+	color: #ffffffbf; /**/
+	border-bottom-width: 5px; /*makes the border under the tabs only*/
+	border-bottom-style: solid;
+	border-bottom-color: #C70039;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.tab { /*all of the tabs*/
+	cursor: pointer;
+	padding: 10px;
+}
+
+.tab.active {
+	background-color: #FF0048; /*which color shows up on your current active tab*/
+}
+
+.tab:hover {
+	background-color: #b30000; /*which color shows up when you hover over a tab*/
+	color: #ffffff;
+}
+
+.tab-content { /*information inside of the tabs*/
+	margin-left: 20px;
+	margin-right: 20px;
+	font-family: 'comic sans ms';
+	color: #ffffff;
+	text-align: center;
+	border-style: solid;
+	border-radius: 10px;
+	margin-top: 15px;
+}	
